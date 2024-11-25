@@ -19,9 +19,9 @@ public class Application {
 
         System.out.println("숫자 야구 게임을 시작합니다!");
         System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
+        boolean isCorrect=false;
 
-
-        while (true) {
+        while (!isCorrect) {
             // 사용자 입력 받기 (이 부분은 완성되어 있음)
             ArrayList<Integer> user = new ArrayList<>();
             System.out.print("\n첫 번째 숫자를 입력하세요: ");
@@ -37,11 +37,11 @@ public class Application {
             for (int i = 0; i < 3; i++) {
                 if (randomNum.get(i) == user.get(i)) {
                     strike = strike + 1;
-                } else if (randomNum.get(i) == user.get(i)) {
+                } else  {
                     for (int j = 0; j < 3; j++) {
-                        ball = ball + 1;
-                    }
 
+                    }
+                    ball = ball + 1;
 
                 }
             }
@@ -69,7 +69,7 @@ public class Application {
             System.out.println(ball + "  볼");
 
             // TODO: 3 스트라이크인 경우 게임을 끝내세요
-            if (strike == 3) break;
+            if (strike == 3) isCorrect=true;
 
         }
 
