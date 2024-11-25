@@ -41,9 +41,28 @@ public class Application {
             if(randomNum.get(2)==user3){
                 strike =strike+1;
             }
+            int ball =0;
+            if(randomNum.get(0)==user2){
+                ball =ball+1;
+            }
+            if(randomNum.get(0)==user3){
+                ball =ball+1;
+            }
+            if(randomNum.get(1)==user1){
+                ball =ball+1;
+            }
+            if(randomNum.get(1)==user3){
+                ball =ball+1;
+            }
+            if(randomNum.get(2)==user1){
+                ball =ball+1;
+            }
+            if(randomNum.get(2)==user2){
+                ball =ball+1;
+            }
             // TODO: 결과를 출력하세요 (예: "1 스트라이크")
             System.out.println(strike + " 스트라이크");
-
+            System.out.println(ball + "  볼");
 
             // TODO: 3 스트라이크인 경우 게임을 끝내세요
             if(strike==3) break;
