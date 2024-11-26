@@ -39,9 +39,11 @@ public class Application {
                     strike = strike + 1;
                 } else  {
                     for (int j = 0; j < 3; j++) {
-
+                       if(randomNum.get(i) == user.get(j)){
+                            ball = ball + 1;
+                        }
                     }
-                    ball = ball + 1;
+
                 }
             }
 //
