@@ -15,19 +15,27 @@ public class Application {
         Ball ball3 = new Ball(3, 3);
 
 
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.print("\n첫 번째 숫자를 입력하세요: ");
-            Ball userBall1 = new Ball(1, scanner.nextInt());
-            System.out.print("두 번째 숫자를 입력하세요: ");
-            Ball userBall2 = new Ball(2, scanner.nextInt());
-            System.out.print("세 번째 숫자를 입력하세요: ");
-            Ball userBall3 = new Ball(3, scanner.nextInt());
+        ArrayList<Integer> balls = new ArrayList<>();
+        balls.add(ball1.number);
+        balls.add(ball2.number);
+        balls.add(ball3.number);
 
 
 
 
-        }
+//        Scanner scanner = new Scanner(System.in);
+//        while (true) {
+//            System.out.print("\n첫 번째 숫자를 입력하세요: ");
+//            Ball userBall1 = new Ball(1, scanner.nextInt());
+//            System.out.print("두 번째 숫자를 입력하세요: ");
+//            Ball userBall2 = new Ball(2, scanner.nextInt());
+//            System.out.print("세 번째 숫자를 입력하세요: ");
+//            Ball userBall3 = new Ball(3, scanner.nextInt());
+//
+//
+//
+//
+//        }
 
 
        /* Scanner scanner = new Scanner(System.in);

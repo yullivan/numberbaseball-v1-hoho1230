@@ -6,6 +6,7 @@ import java.util.List;
 public class Ball {
     int position;
     int number;
+    List<Ball> balls;
 
     public Ball(int position, int number) {
         this.position = position;
@@ -23,6 +24,14 @@ public class Ball {
             return BallStatus.BALL;
         }
             return BallStatus.NOTHING;
+    }
+    Enum<BallStatus> matchStatus2(Ball userBall) {
+
+        for (Ball ball : balls) {
+            ball.matchStatus(userBall);
+
+        }
+        return BallStatus.NOTHING;
     }
 
 
