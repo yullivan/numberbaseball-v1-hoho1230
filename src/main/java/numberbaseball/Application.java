@@ -5,7 +5,32 @@ import java.util.*;
 public class Application {
 
     public static void main(String[] args) {
+
+        System.out.println("숫자 야구 게임을 시작합니다!");
+        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
+
+
+        Ball ball1 = new Ball(1, 1);
+        Ball ball2 = new Ball(2, 2);
+        Ball ball3 = new Ball(3, 3);
+
+
         Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.print("\n첫 번째 숫자를 입력하세요: ");
+            Ball userBall1 = new Ball(1, scanner.nextInt());
+            System.out.print("두 번째 숫자를 입력하세요: ");
+            Ball userBall2 = new Ball(2, scanner.nextInt());
+            System.out.print("세 번째 숫자를 입력하세요: ");
+            Ball userBall3 = new Ball(3, scanner.nextInt());
+
+
+
+
+        }
+
+
+       /* Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> num = new ArrayList<>();
 
         for (int i = 1; i < 10; i++) {
@@ -56,6 +81,8 @@ public class Application {
         }
 
         System.out.println("축하합니다! 정답을 맞추셨습니다.");
-    }
+    }*/
 
+    }
 }
+
