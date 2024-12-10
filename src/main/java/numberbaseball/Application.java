@@ -30,7 +30,7 @@ public class Application {
 
 
 
-       List randomNum = num.subList(0,1);
+      // List randomNum = num.subList(0,1).stream().mapToInt(Integer::intValue);
         //System.out.println(randomNum);
         System.out.println(num);
         System.out.println(num.subList(0,1));
@@ -39,19 +39,20 @@ public class Application {
 
 
 
-//        Scanner scanner = new Scanner(System.in);
-//        while (true) {
-//            System.out.print("\n첫 번째 숫자를 입력하세요: ");
-//            Ball userBall1 = new Ball(1, scanner.nextInt());
-//            System.out.print("두 번째 숫자를 입력하세요: ");
-//            Ball userBall2 = new Ball(2, scanner.nextInt());
-//            System.out.print("세 번째 숫자를 입력하세요: ");
-//            Ball userBall3 = new Ball(3, scanner.nextInt());
-//
-//
-//
-//
-//        }
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+            System.out.print("\n첫 번째 숫자를 입력하세요: ");
+
+            Ball userBall1 = new Ball(1, scanner.nextInt());
+            System.out.print("두 번째 숫자를 입력하세요: ");
+            Ball userBall2 = new Ball(2, scanner.nextInt());
+            System.out.print("세 번째 숫자를 입력하세요: ");
+            Ball userBall3 = new Ball(3, scanner.nextInt());
+
+        }
+        //ArrayList<Balls> list = new Balls();
+        //Balls userBalls= new Balls(list);
+
 
 
        /* Scanner scanner = new Scanner(System.in);
