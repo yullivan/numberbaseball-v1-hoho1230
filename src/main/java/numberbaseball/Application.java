@@ -6,8 +6,8 @@ public class Application {
 
     public static void main(String[] args) {
 
-//        System.out.println("숫자 야구 게임을 시작합니다!");
-//        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
+        System.out.println("숫자 야구 게임을 시작합니다!");
+        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
 
 
 //        Ball ball1 = new Ball(1, 1);
@@ -20,6 +20,22 @@ public class Application {
 //        balls.add(ball2.number);
 //        balls.add(ball3.number);
 
+        ArrayList<Integer> num = new ArrayList<>();
+        for (int i = 1; i < 10; i++) {
+            num.add(i);
+        }
+        Collections.shuffle(num);
+
+        //Balls computerBalls= new Balls(List.of(new Ball(1,num.subList(0,1)),);
+
+
+
+       List randomNum = num.subList(0,1);
+        //System.out.println(randomNum);
+        System.out.println(num);
+        System.out.println(num.subList(0,1));
+        System.out.println(num.subList(1,2));
+        System.out.println(num.subList(2,3));
 
 
 
