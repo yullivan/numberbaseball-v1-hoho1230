@@ -6,19 +6,19 @@ public class Application {
 
     public static void main(String[] args) {
 
-        System.out.println("숫자 야구 게임을 시작합니다!");
-        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
+//        System.out.println("숫자 야구 게임을 시작합니다!");
+//        System.out.println("1부터 9까지의 서로 다른 숫자 3개를 맞춰보세요.");
 
 
-        Ball ball1 = new Ball(1, 1);
-        Ball ball2 = new Ball(2, 2);
-        Ball ball3 = new Ball(3, 3);
+//        Ball ball1 = new Ball(1, 1);
+//        Ball ball2 = new Ball(2, 2);
+//        Ball ball3 = new Ball(3, 3);
 
 
-        ArrayList<Integer> balls = new ArrayList<>();
-        balls.add(ball1.number);
-        balls.add(ball2.number);
-        balls.add(ball3.number);
+//        ArrayList<Integer> balls = new ArrayList<>();
+//        balls.add(ball1.number);
+//        balls.add(ball2.number);
+//        balls.add(ball3.number);
 
 
 

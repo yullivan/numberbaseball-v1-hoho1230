@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Ball {
    private int position;
     private int number;
-    private List<Ball> balls;
+    //private List<Ball> balls;
 
     public Ball(int position, int number) {
         this.position = position;
@@ -15,31 +15,27 @@ public class Ball {
     }
 
 
-    Enum<BallStatus> matchStatus(Ball userBall) {
+    BallStatus matchStatus(Ball userBall) {
 
-        if (balls.equals(userBall)) {
-                return BallStatus.STRIKE;
+        if (number==userBall.number && position == userBall.position) {
 
-        } else if (position == userBall.position) {
+            return BallStatus.STRIKE;
+
+        } else if (number==userBall.number) {
+
             return BallStatus.BALL;
         }
+
             return BallStatus.NOTHING;
     }
-    Enum<BallStatus> matchStatus2(Ball userBall) {
 
-        for (Ball ball : balls) {
-            ball.matchStatus(userBall);
-
-        }
-        return BallStatus.NOTHING;
-    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ball ball = (Ball) o;
-        return position == ball.position && number == ball.number && Objects.equals(balls, ball.balls);
+        return position == ball.position && number == ball.number;
     }
 
     public int getPosition() {
@@ -58,16 +54,20 @@ public class Ball {
         this.number = number;
     }
 
-    public List<Ball> getBalls() {
-        return balls;
-    }
-
-    public void setBalls(List<Ball> balls) {
-        this.balls = balls;
-    }
 
     @Override
     public int hashCode() {
-        return Objects.hash(position, number, balls);
+        return Objects.hash(position, number);
     }
+
+    @Override
+    public String toString() {
+        return "Ball{" +
+                "position=" + position +
+                ", number=" + number +
+                '}';
+    }
+
+
 }
+

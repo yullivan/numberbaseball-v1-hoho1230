@@ -10,48 +10,45 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ApplicationTests {
 
-	@Test
-	void name1() {
-		//given
-		Ball ball1 =new Ball(1,3);
-		Ball ball2 =new Ball(1,7);
-		Ball ball3 =new Ball(1,9);
-		Ball userBall1 =new Ball(1,3);
-		Ball userBall2 =new Ball(2,7);
-		Ball userBall3 =new Ball(2,2);
+    @Test
+    void name1() {
+        //given
+        Ball ball1 = new Ball(1, 3);
+        Ball ball2 = new Ball(1, 7);
+        Ball ball3 = new Ball(1, 9);
+        Ball userBall1 = new Ball(1, 3);
+        Ball userBall2 = new Ball(2, 7);
+        Ball userBall3 = new Ball(2, 2);
 
 
-		//when
+        //when
 
-		//then
-		assertThat(ball1.matchStatus(userBall1)).isEqualTo("STRIKE");
-		assertThat(ball2.matchStatus(userBall2)).isEqualTo("BALL");
-		assertThat(ball3.matchStatus(userBall3)).isEqualTo("NOTHING");
+        //then
+        assertThat(ball1.matchStatus(userBall1)).isEqualTo(BallStatus.STRIKE);
+        assertThat(ball2.matchStatus(userBall2)).isEqualTo(BallStatus.BALL);
+        assertThat(ball3.matchStatus(userBall3)).isEqualTo(BallStatus.NOTHING);
 
 
-	}
+    }
 
-	@Test
-	void name2() {
-		//give
-		Ball ball1 =new Ball(1,1);
-		Ball ball2 =new Ball(2,2);
-		Ball ball3 =new Ball(3,3);
-		Ball userBall1 =new Ball(1,1);
-		Ball userBall2 =new Ball(3,1);
-		Ball userBall3 =new Ball(3,9);
-		List<Ball> balls =new ArrayList<>();
+    @Test
+    void name2() {
+        //give
 
-		//Balls balls =new ArrayList<Ball>();
-		balls.add(ball1);
-		balls.add(ball2);
-		balls.add(ball3);
+        Ball userBall1 = new Ball(1, 1);
+        Ball userBall2 = new Ball(3, 1);
+        Ball userBall3 = new Ball(3, 9);
 
-		//when
+        Balls balls = new Balls(List.of(new Ball(1, 1),
+                new Ball(1, 2),new Ball(1, 3)));
 
-		//then
-		assertThat(ball1.matchStatus2(userBall1)).isEqualTo("STRIKE");
-		assertThat(ball2.matchStatus2(userBall2)).isEqualTo("BALL");
-		assertThat(ball1.matchStatus2(userBall3)).isEqualTo("NOTHING");
-	}
+
+        System.out.println(balls);
+        //when
+
+        //then
+        assertThat(balls.matchStatus(userBall1)).isEqualTo(BallStatus.STRIKE);
+        assertThat(balls.matchStatus(userBall2)).isEqualTo(BallStatus.BALL);
+        assertThat(balls.matchStatus(userBall3)).isEqualTo(BallStatus.NOTHING);
+    }
 }
